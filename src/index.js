@@ -16,7 +16,8 @@ const myFileReader = async (fileName) => {
 const myFileUpdater = async (fileName, fileContent) => {
   // write code here
   // dont chnage function name
-  fs.appendFile(fileName, fileContent);
+  const readFile = fs.appendFile(fileName, fileContent);
+  return readFile;
 };
 
 const myFileDeleter = async (fileName) => {
