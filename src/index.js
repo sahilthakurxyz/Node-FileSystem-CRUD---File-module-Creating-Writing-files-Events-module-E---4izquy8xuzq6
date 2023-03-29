@@ -10,14 +10,14 @@ const myFileWriter = async (fileName, fileContent) => {
 const myFileReader = async (fileName) => {
   // write code here
   // dont chnage function name
-  await fs.readFile(fileName);
+  const readFile = await fs.readFile(fileName);
+  return readFile;
 };
 
 const myFileUpdater = async (fileName, fileContent) => {
   // write code here
   // dont chnage function name
-  const readFile = fs.appendFile(fileName, fileContent);
-  return readFile;
+  fs.appendFile(fileName, fileContent);
 };
 
 const myFileDeleter = async (fileName) => {
